@@ -1032,3 +1032,65 @@ footer {
     top: 55%;
   }
 }
+
+.motion-keywords {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.motion-keywords .keyword {
+  position: absolute;
+  display: block;
+  padding: 7px 12px;
+  border: 1px solid #111;
+  border-radius: 50px;
+  background: #f3f1eb;
+  color: #111;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: keywordFloat 3s ease-in-out infinite;
+}
+
+.motion-keywords .k1 {
+  left: 5%;
+  top: 20%;
+}
+
+.motion-keywords .k2 {
+  left: 25%;
+  top: 10%;
+}
+
+.motion-keywords .k3 {
+  left: 50%;
+  top: 25%;
+}
+
+.motion-keywords .k4 {
+  left: 65%;
+  top: 10%;
+}
+
+.motion-keywords .k5 {
+  left: 72%;
+  top: 45%;
+}
+
+.motion-keywords .k6 {
+  left: 35%;
+  top: 60%;
+}
+
+@keyframes keywordFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
