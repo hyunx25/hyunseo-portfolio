@@ -52,11 +52,25 @@ function renderCareer(list = careerPages){
 const defaultPdf = "career.pdf";
 
 pages.innerHTML = `
-  <iframe
-    src="${defaultPdf}"
-    title="진로 학습지"
-    style="width:100%;height:520px;border:0;background:white">
-  </iframe>
+  <div style="width:100%;background:white;text-align:center;">
+    <embed
+      src="${defaultPdf}"
+      type="application/pdf"
+      width="100%"
+      height="650px"
+      style="display:block;border:0;"
+    >
+
+    <div style="padding:18px;">
+      <a
+        href="${defaultPdf}"
+        target="_blank"
+        rel="noopener"
+        style="display:inline-block;padding:10px 18px;border:1px solid #111;text-decoration:none;color:#111;">
+        PDF 전체 보기 ↗
+      </a>
+    </div>
+  </div>
 `;
 
 toc.innerHTML = `
@@ -83,11 +97,25 @@ document.querySelector("#pdfSearch").oninput = e => {
     );
   }else{
     pages.innerHTML = `
-      <iframe
-        src="${defaultPdf}"
-        title="진로 학습지"
-        style="width:100%;height:520px;border:0;background:white">
-      </iframe>
+      <div style="width:100%;background:white;text-align:center;">
+        <embed
+          src="${defaultPdf}"
+          type="application/pdf"
+          width="100%"
+          height="650px"
+          style="display:block;border:0;"
+        >
+
+        <div style="padding:18px;">
+          <a
+            href="${defaultPdf}"
+            target="_blank"
+            rel="noopener"
+            style="display:inline-block;padding:10px 18px;border:1px solid #111;text-decoration:none;color:#111;">
+            PDF 전체 보기 ↗
+          </a>
+        </div>
+      </div>
     `;
 
     toc.innerHTML = `
